@@ -1,0 +1,5 @@
+SELECT * FROM employee LIMIT 0, 10;
+
+SELECT * FROM employee LIMIT 10;
+
+SELECT * FROM employee LIMIT 10, 10;
