@@ -32,3 +32,18 @@ ALTER TABLE employee ADD CONSTRAINT foreign_key_department_id FOREIGN KEY (depar
 ALTER TABLE employee DROP FOREIGN KEY foreign_key_department_id;
 
 DELETE FROM department WHERE id = 1;
+
+ALTER TABLE employee ADD CONSTRAINT foreign_key_department_id FOREIGN KEY (department_id) REFERENCES department(id) 
+ON UPDATE CASCADE ON DELETE CASCADE;
+
+UPDATE department SET id = 6 WHERE name = '研发部';
+
+DELETE FROM department where name = '研发部';
+
+DROP TABLE employee;
+DROP TABLE department;
+
+ALTER TABLE employee ADD CONSTRAINT foreign_key_department_id FoREIGN KEY (department_id) REFERENCES department(id)
+ON UPDATE SET NULL ON DELETE SET NULL;
+
+DELETE FROM department WHERE name = '研发部';
