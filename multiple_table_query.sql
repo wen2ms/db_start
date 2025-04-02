@@ -38,3 +38,11 @@ INSERT INTO employee (id, name, age, job, salary, entry_date, manager_id, depart
 (17, '陈友谅', 42, NULL, 2000, '2011-10-12', 1, NULL);
 
 SELECT * FROM employee, department WHERE employee.department_id = department.id ORDER BY employee.id ASC;
+
+SELECT employee.name, department.name FROM employee, department WHERE employee.department_id = department.id;  
+
+SELECT emp.name emp_name, dept.name dept_name FROM employee AS emp, department dept WHERE emp.department_id = dept.id;
+
+SELECT emp.name emp_name, dept.name dept_name FROM employee emp INNER JOIN department dept ON emp.department_id = dept.id;
+
+SELECT emp.name emp_name, dept.name dept_name FROM employee emp JOIN department dept ON emp.department_id = dept.id;
