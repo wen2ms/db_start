@@ -46,3 +46,12 @@ SELECT emp.name emp_name, dept.name dept_name FROM employee AS emp, department d
 SELECT emp.name emp_name, dept.name dept_name FROM employee emp INNER JOIN department dept ON emp.department_id = dept.id;
 
 SELECT emp.name emp_name, dept.name dept_name FROM employee emp JOIN department dept ON emp.department_id = dept.id;
+
+SELECT emp.*, dept.name FROM employee emp LEFT OUTER JOIN department dept ON emp.department_id = dept.id
+
+SELECT emp.*, dept.name FROM employee emp LEFT JOIN department dept ON emp.department_id = dept.id
+
+SELECT dept.*, emp.* FROM employee emp RIGHT OUTER JOIN department dept ON emp.department_id = dept.id
+
+SELECT dept.*, emp.* FROM department dept LEFT OUTER JOIN employee emp ON emp.department_id = dept.id
+ 
