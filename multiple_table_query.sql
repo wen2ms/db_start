@@ -68,3 +68,7 @@ SELECT * FROM employee WHERE age > 50;
 SELECT * FROM employee WHERE salary < 5000
 UNION
 SELECT * FROM employee WHERE age > 50;
+
+SELECT * FROM employee WHERE department_id = (SELECT id FROM department WHERE name = '销售部');
+
+SELECT * FROM employee WHERE entry_date > (SELECT entry_date FROM employee WHERE name = '方东白');
