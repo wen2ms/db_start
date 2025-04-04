@@ -80,3 +80,5 @@ ALL (SELECT salary FROM employee WHERE department_id = (SELECT id FROM departmen
 
 SELECT * FROM employee WHERE salary >
 ANY (SELECT salary FROM employee WHERE department_id = (SELECT id FROM department WHERE name = '研发部'));
+
+SELECT * FROM employee WHERE (salary, manager_id) = (SELECT salary, manager_id FROM employee WHERE name = '张无忌');
