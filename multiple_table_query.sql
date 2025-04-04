@@ -60,3 +60,11 @@ SELECT emp.name employee_name, boss.name boss_name FROM employee emp, employee b
 SELECT emp.name 'employee_name', boss.name 'boss_name' FROM employee emp LEFT JOIN employee boss
 ON emp.manager_id = boss.id;
  
+-- The nubmer of columns must remain consistent
+SELECT * FROM employee WHERE salary < 5000
+UNION ALL
+SELECT * FROM employee WHERE age > 50;
+
+SELECT * FROM employee WHERE salary < 5000
+UNION
+SELECT * FROM employee WHERE age > 50;
