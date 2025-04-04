@@ -82,3 +82,8 @@ SELECT * FROM employee WHERE salary >
 ANY (SELECT salary FROM employee WHERE department_id = (SELECT id FROM department WHERE name = '研发部'));
 
 SELECT * FROM employee WHERE (salary, manager_id) = (SELECT salary, manager_id FROM employee WHERE name = '张无忌');
+
+SELECT * FROM employee WHERE (salary, job) IN (SELECT salary, job FROM employee WHERE name = '鹿杖客' OR name = '宋远桥');
+
+SELECT sub_emp.*, dept.* FROM (SELECT * FROM employee WHERE entry_date > '2006-01-01') sub_emp LEFT JOIN department dept
+ON sub_emp.department_id = dept.id;
