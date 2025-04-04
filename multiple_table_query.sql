@@ -47,11 +47,16 @@ SELECT emp.name emp_name, dept.name dept_name FROM employee emp INNER JOIN depar
 
 SELECT emp.name emp_name, dept.name dept_name FROM employee emp JOIN department dept ON emp.department_id = dept.id;
 
-SELECT emp.*, dept.name FROM employee emp LEFT OUTER JOIN department dept ON emp.department_id = dept.id
+SELECT emp.*, dept.name FROM employee emp LEFT OUTER JOIN department dept ON emp.department_id = dept.id;
 
-SELECT emp.*, dept.name FROM employee emp LEFT JOIN department dept ON emp.department_id = dept.id
+SELECT emp.*, dept.name FROM employee emp LEFT JOIN department dept ON emp.department_id = dept.id;
 
-SELECT dept.*, emp.* FROM employee emp RIGHT OUTER JOIN department dept ON emp.department_id = dept.id
+SELECT dept.*, emp.* FROM employee emp RIGHT OUTER JOIN department dept ON emp.department_id = dept.id;
 
-SELECT dept.*, emp.* FROM department dept LEFT OUTER JOIN employee emp ON emp.department_id = dept.id
+SELECT dept.*, emp.* FROM department dept LEFT OUTER JOIN employee emp ON emp.department_id = dept.id;
+
+SELECT emp.name employee_name, boss.name boss_name FROM employee emp, employee boss WHERE emp.manager_id = boss.id;
+
+SELECT emp.name 'employee_name', boss.name 'boss_name' FROM employee emp LEFT JOIN employee boss
+ON emp.manager_id = boss.id;
  
