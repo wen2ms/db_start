@@ -1,0 +1,14 @@
+SHOW CREATE TABLE account;
+
+SHOW ENGINES;
+
+CREATE TABLE my_myisam(
+	id INT,
+	name VARCHAR(10)
+) ENGINE = MyISAM;
+
+
+CREATE TABLE my_memory(
+	id INT,
+	name VARCHAR(10)
+) ENGINE = MEMORY;
