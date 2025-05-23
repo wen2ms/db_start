@@ -1,9 +1,9 @@
-create table employee(
-    id int,
-    empolyee_id varchar(10),
-    name varchar(10),
-    gender char(1),
-    age tinyint unsigned,
-    card_id char(18),
-    entry_time date 
-) comment 'Employee Table';
+CREATE TABLE employee(
+    id INT,
+    empolyee_id VARCHAR(10),
+    name VARCHAR(10),
+    gender CHAR(1),
+    age TINYINT UNSIGNED,
+    card_id CHAR(18),
+    entry_time DATE 
+) COMMENT 'Employee Table';
