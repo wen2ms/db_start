@@ -12,7 +12,7 @@ CREATE TABLE course(
 	name VARCHAR(10)
 );
 
-INSERT INTO courses(id, name) VALUES (NULL, 'Java'), (NULL, 'PHP'), (NULL , 'MySQL'), (NULL, 'Hadoop');
+INSERT INTO course(id, name) VALUES (NULL, 'Java'), (NULL, 'PHP'), (NULL , 'MySQL'), (NULL, 'Hadoop');
 
 CREATE TABLE student_course(
 	id INT AUTO_INCREMENT PRIMARY KEY,
