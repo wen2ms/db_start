@@ -1,0 +1,31 @@
+SELECT * FROM user WHERE SUBSTRING(phone, 10, 2) = '15'; 
+
+EXPLAIN SELECT * FROM user WHERE SUBSTRING(phone, 10, 2) = '15'; 
+
+EXPLAIN SELECT * FROM user WHERE phone = 17799990012;
+
+EXPLAIN SELECT * FROM user WHERE phone = '17799990012';
+
+EXPLAIN SELECT * FROM user WHERE profession LIKE '软件%';
+
+EXPLAIN SELECT * FROM user WHERE profession LIKE '%工程';
+
+EXPLAIN SELECT * FROM user WHERE id = 10 OR age = 20;
+
+CREATE INDEX idx_user_age ON user (age);
+
+EXPLAIN SELECT * FROM user WHERE id = 10 OR age = 20;
+
+EXPLAIN SELECT * FROM user WHERE phone >= '17799990021';
+
+EXPLAIN SELECT * FROM user WHERE phone >= '17799990000';
+
+EXPLAIN SELECT * FROM user WHERE profession IS NULL;
+
+EXPLAIN SELECT * FROM user WHERE profession IS NOT NULL;
+
+UPDATE user SET profession = NULL;
+
+EXPLAIN SELECT * FROM user WHERE profession IS NULL;
+
+EXPLAIN SELECT * FROM user WHERE profession IS NOT NULL;
