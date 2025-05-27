@@ -1,0 +1,11 @@
+SELECT COUNT(DISTINCT email) / COUNT(*) FROM user;
+
+SELECT COUNT(DISTINCT SUBSTRING(email, 1, 9)) / COUNT(*) FROM user;
+
+SELECT COUNT(DISTINCT SUBSTRING(email, 1, 5)) / COUNT(*) FROM user;
+
+CREATE INDEX idx_user_email_5 ON user(email(5));
+
+SHOW INDEX FROM user;
+
+EXPLAIN SELECT * FROM user WHERE email LIKE 'deqiao%';
